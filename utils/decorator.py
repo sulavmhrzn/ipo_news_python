@@ -2,7 +2,7 @@ def send_email(your_email, your_password, recepient_email):
     import yagmail
     from datetime import datetime
 
-    def outer(fn):
+    def actual_decorator(fn):
         def inner(*args, **kwargs):
             result = fn()
             subject = f"Share Market News {datetime.now().strftime('%Y-%m-%d')}"
